@@ -4,4 +4,8 @@ RUN apk add --no-cache --virtual .build-deps \
 RUN pecl install redis-4.0.1 \
     && pecl install xdebug-2.6.0 \
     && pecl install mcrypt-1.0.1 \
-    && docker-php-ext-enable redis xdebug mcrypt
+    && docker-php-ext-enable redis xdebug 
+    
+RUN apk --update libpng libpng-devel    
+
+RUN docker-php-ext-install gd
