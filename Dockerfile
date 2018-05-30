@@ -1,4 +1,4 @@
-FROM php:7.1-fpm
+FROM php:7.0-fpm
 RUN apt-get update \
 	# 相关依赖必须手动安装
 	&& apt-get install -y \
