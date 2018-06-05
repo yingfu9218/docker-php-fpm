@@ -13,4 +13,4 @@ RUN apt-get update \
     && docker-php-ext-install -j$(nproc) gd
 
 RUN pecl install redis-4.0.1 \
-    && docker-php-ext-enable redis 
+    && docker-php-ext-enable redis
