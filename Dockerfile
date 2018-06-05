@@ -1,4 +1,4 @@
-FROM php:5.6-fpm
+FROM php:5.3-fpm
 RUN apt-get update \
 	# 相关依赖必须手动安装
 	&& apt-get install -y \
