@@ -14,6 +14,8 @@ RUN apt-get update \
 
 RUN pecl install redis-4.0.1 \
     && docker-php-ext-enable redis 
+RUN pecl install mongodb \
+    && docker-php-ext-enable mongodb 
 RUN apt-get install -y cron vim
 RUN apt-get install -y supervisor
 ADD ./start.sh /usr/local/bin/start.sh
